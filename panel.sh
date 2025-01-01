@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install Open Game Panel
-# github.com/sanjaysrocks
-# https://github.com/SanjaySRocks/OGP-Installer/blob/master/ogp-panel-install.sh
+# https://github.com/ebzorhosting
+# https://github.com/ebzorhosting/OGP
 
 cyan() {
 	echo -e "\\033[36;1m${@}\033[0m"
@@ -22,7 +22,7 @@ update_system(){
 install_debian_ubuntu(){
 	wget -N "https://github.com/OpenGamePanel/Easy-Installers/raw/master/Linux/Debian-Ubuntu/ogp-panel-latest.deb" -O "ogp-panel-latest.deb"
 	sudo dpkg -i "ogp-panel-latest.deb"
-
+        sudo apt-get install apache2 curl subversion php7.4 php7.4-gd php7.4-zip libapache2-mod-php7.4 php7.4-curl php7.4-mysql php7.4-xmlrpc php-pear mariadb-server-10.3 php7.4-mbstring git php-bcmath
 	sudo cat /root/ogp_panel_mysql_info
 	sudo cat /root/ogp_user_password
 }
